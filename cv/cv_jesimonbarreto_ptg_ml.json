@@ -1,0 +1,183 @@
+{
+  "selectedTemplate": 1,
+  "headings": {
+    "education": "Formação",
+    "work": "Experiência",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "awards": "Publicações e Patente"
+  },
+  "basics": {
+    "name": "Jesimon Barreto Santos",
+    "email": "jesimonbarreto@gmail.com",
+    "phone": "79988208589",
+    "location": {
+      "address": "Av. Fleming, 1000, bloco 3 apto 102. Belo Horizonte - MG"
+    },
+    "website": "linkedin.com/in/jesimonbarreto/ - github.com/jesimonbarreto"
+  },
+  "education": [
+    {
+      "institution": "Instituto Federal de Sergipe ",
+      "location": "Lagarto, Sergipe, Brasil",
+      "studyType": "Ensino Médio e Técnico em",
+      "startDate": "2011",
+      "endDate": "2014",
+      "area": "Redes de Computadores"
+    },
+    {
+      "institution": "Universidade Federal de Minas Gerais",
+      "location": "Belo Horizonte, Minas Gerais, Brasil",
+      "studyType": "Graduação",
+      "startDate": "2016",
+      "endDate": "Atual",
+      "area": "Engenharia de Sistemas"
+    }
+  ],
+  "work": [
+    {
+      "location": "Lagarto, Segipe, Brasil",
+      "position": "Bolsista de iniciação científica",
+      "website": "",
+      "startDate": "2012",
+      "endDate": "2016",
+      "highlights": [
+        "Pesquisa e desenvolvimento em interação humano-computador (Aplicações do sensor Kinect)",
+        "Monitoria a novos integrantes do grupo de pesquisa"
+      ],
+      "company": "Touching the Air Research Group"
+    },
+    {
+      "highlights": [
+        "Reconhecimento de atividade humana baseado em informações visuais",
+        "Reconhecimento de atividade humana baseado informações de sensores de movimento vestíveis",
+        "Estimação de ângulo da posição da cabeça baseado em dados visuais",
+        "Utilização de métodos de deep learing em dispositivos de baixo custo"
+      ],
+      "company": "Smart Sense Laboratory",
+      "position": "Bolsista de iniciação científica",
+      "location": "Belo Horizonte, Minas Gerais, Brasil",
+      "startDate": "2016",
+      "endDate": "Atual"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "C/C++",
+        "Python",
+        "Java",
+        "R"
+      ],
+      "name": "Linguagens de Programação"
+    },
+    {
+      "keywords": [
+        null
+      ]
+    },
+    {
+      "keywords": [
+        null
+      ]
+    },
+    {
+      "keywords": [
+        null
+      ]
+    },
+    {
+      "keywords": [
+        null
+      ]
+    },
+    {
+      "keywords": [
+        "Experiência em projetos"
+      ],
+      "name": "Pesquisa e Desenvolvimento"
+    },
+    {
+      "keywords": [
+        "Experiência em projetos"
+      ],
+      "name": "Ciência de dados e Engenharia de dados"
+    },
+    {
+      "keywords": [
+        "Boa leitura e escrita"
+      ],
+      "name": "Inglês"
+    },
+    {
+      "keywords": [
+        "Opencv",
+        null,
+        "Scikit-learn",
+        "Keras",
+        null,
+        "Scipy",
+        "Matplotlib",
+        "entre outros"
+      ],
+      "name": "Ferramentras e frameworks"
+    }
+  ],
+  "projects": [
+    {
+      "keywords": [
+        null
+      ]
+    },
+    {
+      "keywords": [
+        ""
+      ]
+    },
+    {
+      "keywords": [
+        null
+      ],
+      "name": "HAR-HEALTH: Reconhecimento de Atividades Humanas associadas a Doenças Crônicas",
+      "description": "(2017 - 2018)  O objetivo desse projeto é a pesquisa e o desenvolvimento de métodos e algoritmos capazes de reconhecer, automaticamente, atividades humanas relacionadas a doenças crônicas (diabetes, hipertensão, obesidade e envelhecimento) a partir de informações visuais, sinais capturados por sensores de dispositivos móveis pessoais e sinais capturados por sensores instalados nos ambientes. Eu atuei como pesquisador assistente não graduado, participei da coleta e anotação de dados. Além disso, trabalhei na pesquisa, implementação e validação de métodos da literatura. Projeto financiado pela Samsung Brasil."
+    },
+    {
+      "keywords": [
+        ""
+      ],
+      "name": "SMS: Pesquisa e Desenvolvimento de um Sistema de Vigilância Inteligente Aplicado a Plataformas de Petróleo",
+      "description": "(2018 - Atual) Este projeto apresenta dois objetivos. i) o estudo, desenvolvimento e avaliação de algoritmos a serem incorporados ao protótipo de sistema de vigilância capazes de analisar o vídeo de forma automática e ii) criação, desenvolvimento, implantação e validação experimental de um protótipo de sistema de vigilância inteligente capaz de monitorar os trabalhadores em regiões da plataforma de exploração de petróleo a partir de dados visuais. Eu atuei como pesquisador e desenvolvedor em equipe de alunos de mestrado e doutorado. Entre as tarefas que executei estão captura e anotação de dados, pesquisa e implementação de métodos na literatura.  Projeto financiado pela Petrobras."
+    }
+  ],
+  "awards": [
+    {},
+    {
+      "title": "Sena, J., Barreto, J., Caetano, C., Cramer, G., & Schwartz, W. R. (2020). Human Activity Recognition based on Smartphone and Wearable Sensors Using Multiscale DCNN Ensemble. Neurocomputing.",
+      "awarder": "Neurocomputing"
+    },
+    {
+      "title": "SENA, Jessica; SANTOS, Jesimon Barreto; SCHWARTZ, William Robson. Multiscale dcnn ensemble applied to human activity recognition based on wearable sensors. In: 2018 26th European Signal Processing Conference (EUSIPCO). IEEE, 2018. p. 1202-1206.",
+      "awarder": "EUSIPCO"
+    },
+    {
+      "title": "de Melo, V. H. C., Santos, J. B., Júnior, C. A. C., de Souza, J. S., Penatti, O. A. B., & Schwartz, W. R. (2018, October). Object-based Temporal Segment Relational Network for Activity Recognition. In 2018 31st SIBGRAPI Conference on Graphics, Patterns and Images (SIBGRAPI) (pp. 103-109). IEEE.",
+      "awarder": "SIBGRAPI"
+    },
+    {},
+    {
+      "title": "Patente: Método de Reconhecimento de Vídeo Capaz de Codificar Relações Temporais e Espaciais de Conceitos utilizando Informações Contextuais",
+      "awarder": "br BR1020190245697",
+      "date": "2019"
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "work",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}
