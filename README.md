@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+# jesimonbarreto.github.io
 
-You can use the [editor on GitHub](https://github.com/jesimonbarreto/jesimonbarreto.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Personal site for Jesimon Barreto — AI & Computer Vision.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Structure
+- `index.html` — single-file site (no build).
+- `logos/` — partner logos (SVG placeholders).
+- `cv/jesimon_barreto.pdf` — your CV (replace the placeholder).
+- `headshot.jpg` — your photo (replace the placeholder).
 
-### Markdown
+## How to publish (GitHub Pages)
+1. Create the repo **jesimonbarreto.github.io** (public).
+2. Upload all files in this zip to the repo root.
+3. Commit to `main`. Pages will be available at `https://jesimonbarreto.github.io/`.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Replace placeholders
+- Upload your `headshot.jpg` to the repo root.
+- Replace `cv/jesimon_barreto.pdf` with your real CV.
+- Swap logos in `logos/` with official SVG/PNG if you prefer.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jesimonbarreto/jesimonbarreto.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Optional
+- Edit the `DATA` block at the bottom of `index.html` to add more projects, publications and patents.

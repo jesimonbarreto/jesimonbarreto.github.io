@@ -1,30 +1,465 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Jesimon Barreto - Website</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">About me</a></li>
-        		<li><a href=https://github.com/jesimonbarreto/jesimonbarreto.github.io/blob/main/cv/jesimon_barreto.pdf target="_blank">CV</a></li>
-			<li><a href=https://www.linkedin.com/in/jesimonbarreto/ target="_blank">LinkedIn</a></li>
-        		<li><a href=http://lattes.cnpq.br/3610168177845458 target="_blank">Lattes CV</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-		<div class="blurb">
-			<h2>Jesimon Barreto's website</h2>
-			<h6><p>Jesimon Barreto is a student of systems engineering at the Federal University of Minas Gerais (UFMG), research assistant fellow at the Smart Sense Laboratory (Sense) of the Computer Science Department (DCC). Computer network technician, graduated from the Federal Institute of Sergipe - Campus Lagarto. (website under development. For more details visit my resume or my github on the links available)</p></h6>
-		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:jesimonbarreto@gmail.com">jesimonbarreto@gmail.com</a></li>
-        		<li><a href="https://github.com/jesimonbarreto">github.com/jesimonbarreto</a></li>
-			</ul>
-		</footer>
-	</body>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jesimon Barreto · AI & Computer Vision</title>
+  <meta name="description" content="Jesimon Barreto — AI, Computer Vision, R&D and Portfolio." />
+  <meta name="color-scheme" content="dark light" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jesimon Barreto · AI & Computer Vision" />
+  <meta property="og:description" content="AI, Computer Vision, R&D and Portfolio." />
+  <meta property="og:image" content="https://via.placeholder.co/1200x630.png?text=Jesimon+Barreto" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000000'/%3E%3Ctext x='50' y='55' font-size='50' text-anchor='middle' fill='white' font-family='monospace'%3EJB%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root{
+      --bg:#0b0c10; --muted:#111218; --text:#e6e8ef; --soft:#b8c0d1; --brand:#7c5cff; --brand-2:#19c39c; --card:#0f1117; --border:#1b1f2a;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    @media (prefers-color-scheme: light){:root{--bg:#f7f7fb; --muted:#ffffff; --text:#131626; --soft:#4a5568; --brand:#5b43ff; --card:#ffffff; --border:#e5e7ef;}}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(8px);background:linear-gradient(to bottom, rgba(0,0,0,.55), transparent)}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:12px 8px}
+    nav .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-weight:700;box-shadow:var(--shadow)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:var(--muted);color:var(--text);font-weight:600;box-shadow:var(--shadow);cursor:pointer}
+    .btn:hover{transform:translateY(-1px)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 8px 16px}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.1;margin:0 0 14px}
+    .hero p{font-size:18px;color:var(--soft);margin:0 0 18px}
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+    .tag{padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:var(--muted);font-size:13px;color:var(--soft)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .section{padding:26px 8px}
+    .section h2{font-size:26px;margin:0 0 8px}
+    .muted{color:var(--soft)}
+    .list{display:grid;gap:10px;margin:12px 0}
+    .item{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid var(--border);border-radius:14px;background:var(--muted)}
+    .item .i{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-size:14px;font-weight:700}
+    footer{padding:28px 8px;color:var(--soft)}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap}
+    .avatar{width:120px;height:120px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);border:2px solid var(--border)}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .contacts{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .pill{padding:8px 12px;border:1px solid var(--border);border-radius:999px;background:var(--muted);font-weight:600}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+    .kpi{padding:14px;border:1px solid var(--border);border-radius:14px;background:var(--muted);text-align:center}
+    .kpi .n{font-size:22px;font-weight:800}
+    .logos{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;align-items:center}
+    .logo-card{background:var(--muted);border:1px solid var(--border);border-radius:14px;padding:10px;display:grid;place-items:center}
+    .logo-card img{max-width:100%;max-height:40px;opacity:.9;filter:grayscale(100%)}
+    .lang-select{display:inline-flex;gap:6px}
+    .subnav{list-style:none;display:flex;gap:14px;margin:0 8px 8px 8px;padding:0;flex-wrap:wrap}
+    .subnav a{font-weight:600;opacity:.95}
+    @media (max-width: 980px){.logos{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width: 880px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
+  </style>
+
+  <script>
+    function toggleTheme(){
+      const current = document.documentElement.dataset.theme || 'auto';
+      const next = current==='light' ? 'dark' : current==='dark' ? 'auto' : 'light';
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('theme', next);
+    }
+
+    const i18n = {
+      pt: {
+        role:'IA · Visão Computacional · P&D',
+        hero_title:'Transformando pesquisa em impacto real',
+        hero_desc:'Engenheiro e cientista de dados com foco em <strong>aprendizado de máquina</strong> e <strong>visão computacional</strong>. Atuação desde 2016 em projetos de <strong>P&D</strong>, com publicações e colaboração com empresas como <strong>Samsung</strong>, <strong>Petrobras</strong>, <strong>Google</strong>, <strong>iFood</strong> e <strong>C&A</strong>.',
+        tag1:'Vision Transformers', tag2:'Aprendizado auto-supervisionado', tag3:'MLOps / Big Data', tag4:'RAG · LLM',
+        contact:'Contato',
+        kpi1:'de experiência', kpi2:'artigos & patentes', kpi3:'projetos entregues', kpi4:'parcerias P&D',
+        sec_exp:'Experiência', sec_exp_desc:'Resumo de cargos e responsabilidades atuais e anteriores.',
+        sec_partners:'Parcerias & P&D',
+        sec_portfolio:'Portfólio', sec_portfolio_desc:'Seleção de projetos com código aberto, demos e resultados.',
+        sec_pubs:'Publicações & Patentes',
+        sec_contact:'Contato', contact_desc:'Aberto a consultorias, palestras e colaborações em P&D. Envie uma mensagem:',
+        quick_links:'Links rápidos',
+        footer_left:'Feito com HTML + CSS puros (sem build).',
+        footer_right:'Tema claro/escuro · Acessível · Responsivo',
+        about_title:'Sobre mim'
+      },
+      en: {
+        role:'AI · Computer Vision · R&D',
+        hero_title:'Turning research into real-world impact',
+        hero_desc:'Engineer and data scientist focused on <strong>machine learning</strong> and <strong>computer vision</strong>. Since 2016, working on <strong>R&D</strong> with publications and collaborations with <strong>Samsung</strong>, <strong>Petrobras</strong>, <strong>Google</strong>, <strong>iFood</strong> and <strong>C&A</strong>.',
+        tag1:'Vision Transformers', tag2:'Self-Supervised Learning', tag3:'MLOps / Big Data', tag4:'RAG · LLM',
+        contact:'Contact',
+        kpi1:'years of experience', kpi2:'papers & patents', kpi3:'delivered projects', kpi4:'R&D partnerships',
+        sec_exp:'Experience', sec_exp_desc:'Summary of current and past roles and responsibilities.',
+        sec_partners:'Partners & R&D',
+        sec_portfolio:'Portfolio', sec_portfolio_desc:'Selected projects with open-source code, demos and results.',
+        sec_pubs:'Publications & Patents',
+        sec_contact:'Contact', contact_desc:'Open to consulting, talks and R&D collaborations. Send a message:',
+        quick_links:'Quick links',
+        footer_left:'Built with plain HTML + CSS (no build).',
+        footer_right:'Light/Dark theme · Accessible · Responsive',
+        about_title:'About me'
+      }
+    };
+
+    function setLang(lang){
+      document.documentElement.lang = lang === 'en' ? 'en' : 'pt-br';
+      localStorage.setItem('lang', lang);
+      for(const el of document.querySelectorAll('[data-i18n]')){
+        const key = el.dataset.i18n;
+        const html = (i18n[lang] && i18n[lang][key]) || '';
+        if(html) el.innerHTML = html;
+      }
+      const enAbout = document.querySelector('[data-i18n="about_desc_en"]');
+      const ptAbout = document.querySelector('[data-i18n="about_desc_pt"]');
+      if(enAbout && ptAbout){
+        if(lang==='en'){ enAbout.style.display=''; ptAbout.style.display='none'; }
+        else { enAbout.style.display='none'; ptAbout.style.display=''; }
+      }
+    }
+
+    function initLang(){
+      const stored = localStorage.getItem('lang');
+      const lang = stored || 'en';
+      setLang(lang);
+      const select = document.getElementById('langSel');
+      if(select) select.value = lang;
+    }
+
+    document.addEventListener('DOMContentLoaded', initLang);
+  </script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <div class="logo">JB</div>
+        <div>
+          <strong>Jesimon Barreto</strong><br/>
+          <span class="muted" data-i18n="role">AI · Computer Vision · R&D</span>
+        </div>
+      </div>
+      <div class="toolbar">
+        <a class="btn" href="#contato" aria-label="Contact" data-i18n="contact">Contact</a>
+        <div class="lang-select">
+          <select id="langSel" class="btn" aria-label="Language" onchange="setLang(this.value)">
+            <option value="pt">PT</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        <button class="btn" onclick="toggleTheme()" aria-label="Toggle theme">Theme</button>
+      </div>
+    </nav>
+    <ul class="subnav">
+      <li><a href="/">About me</a></li>
+      <li><a href="./cv/jesimon_barreto.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="https://www.linkedin.com/in/jesimonbarreto/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="http://lattes.cnpq.br/3610168177845458" target="_blank" rel="noopener">Lattes CV</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#patents">Patents</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <h1 data-i18n="hero_title">Turning research into real-world impact</h1>
+      <p data-i18n="hero_desc">
+        Engineer and data scientist focused on <strong>machine learning</strong> and
+        <strong>computer vision</strong>. Since 2016, working on <strong>R&D</strong> with publications and
+        collaborations with <strong>Samsung</strong>, <strong>Petrobras</strong>, <strong>Google</strong>, <strong>iFood</strong> and <strong>C&A</strong>.
+      </p>
+      <div class="tags">
+        <span class="tag" data-i18n="tag1">Vision Transformers</span>
+        <span class="tag" data-i18n="tag2">Self-Supervised Learning</span>
+        <span class="tag" data-i18n="tag3">MLOps / Big Data</span>
+        <span class="tag" data-i18n="tag4">RAG · LLM</span>
+      </div>
+      <div class="contacts">
+        <a class="pill" href="https://github.com/jesimonbarreto" target="_blank" rel="noopener">GitHub</a>
+        <a class="pill" href="https://www.linkedin.com/in/jesimonbarreto/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="pill" href="./cv/jesimon_barreto.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        <a class="pill" href="mailto:jesimonbarreto@gmail.com">jesimonbarreto@gmail.com</a>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><div class="n">9+ years</div><div class="muted" data-i18n="kpi1">years of experience</div></div>
+        <div class="kpi"><div class="n">10+ pubs</div><div class="muted" data-i18n="kpi2">papers & patents</div></div>
+        <div class="kpi"><div class="n">50+</div><div class="muted" data-i18n="kpi3">delivered projects</div></div>
+        <div class="kpi"><div class="n">6</div><div class="muted" data-i18n="kpi4">R&D partnerships</div></div>
+      </div>
+    </div>
+    <div class="card" style="min-height:280px;display:grid;place-items:center;gap:10px">
+      <div class="avatar" aria-label="Headshot">
+        <img id="headshot" src="./headshot.jpg" alt="Jesimon Barreto headshot" />
+      </div>
+      <p class="muted" style="text-align:center;margin:0">Replace <code>headshot.jpg</code> with your photo.</p>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2 data-i18n="about_title">About me</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <p data-i18n="about_desc_en">
+          Jesimon Barreto is a Data Scientist and Computer Vision researcher with experience across R&amp;D and industry, focusing on visual foundation models, self-supervised learning, video understanding, multimodal time series, and MLOps at scale. He has collaborated with Samsung, Petrobras, C&amp;A, Google, iFood and Quero Delivery, covering the full ML lifecycle from data curation to deployment. He holds a BSc in Systems Engineering and an MSc in Computer Science (UFMG), the latter supported by a Google Research Scholarship.
+        </p>
+        <p data-i18n="about_desc_pt" style="display:none">
+          Jesimon Barreto é cientista de dados e pesquisador em visão computacional, com experiência em P&amp;D e indústria, focado em modelos fundacionais de visão, aprendizado auto-supervisionado, compreensão de vídeo, séries temporais multimodais e MLOps em escala. Colaborou com Samsung, Petrobras, C&amp;A, Google, iFood e Quero Delivery, atuando em todo o ciclo de ML da curadoria ao deployment. É graduado em Engenharia de Sistemas e mestre em Ciência da Computação (UFMG), com bolsa Google Research.
+        </p>
+        <div class="contacts" style="margin-top:6px">
+          <a class="pill" href="http://lattes.cnpq.br/3610168177845458" target="_blank" rel="noopener">Lattes CV</a>
+          <a class="pill" href="mailto:jesimonbarreto@gmail.com">jesimonbarreto@gmail.com</a>
+        </div>
+      </div>
+      <div class="card">
+        <ul style="margin:0;padding-left:18px">
+          <li><strong>Focus:</strong> Computer Vision, VFMs, SSL, Multimodal TS, MLOps.</li>
+          <li><strong>Industry:</strong> Retail/Fashion, Food Delivery, Geoscience, Safety.</li>
+          <li><strong>Tooling:</strong> PyTorch/JAX/TF, Lightning, MLflow/DVC, AWS/GCP, Docker.</li>
+          <li><strong>Education:</strong> MSc CS (UFMG, 2023–2025), BSc Systems Eng. (UFMG).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="parcerias">
+    <h2 data-i18n="sec_partners">Partners & R&D</h2>
+    <div class="logos">
+      <div class="logo-card"><img src="./logos/samsung.svg" alt="Samsung" title="Samsung" /></div>
+      <div class="logo-card"><img src="./logos/petrobras.svg" alt="Petrobras" title="Petrobras" /></div>
+      <div class="logo-card"><img src="./logos/quero-delivery.svg" alt="Quero Delivery" title="Quero Delivery" /></div>
+      <div class="logo-card"><img src="./logos/google.svg" alt="Google" title="Google" /></div>
+      <div class="logo-card"><img src="./logos/ifood.svg" alt="iFood" title="iFood" /></div>
+      <div class="logo-card"><img src="./logos/cea.svg" alt="C&A" title="C&A" /></div>
+    </div>
+  </section>
+
+  <section class="section" id="experiencia">
+    <h2 data-i18n="sec_exp">Experience</h2>
+    <p class="muted" data-i18n="sec_exp_desc">Summary of current and past roles and responsibilities.</p>
+    <div class="grid cols-2">
+      <div class="item">
+        <div class="i">⚙️</div>
+        <div>
+          <strong>Data Scientist · iFood — 2024–present</strong><br/>
+          <span class="muted">Large-scale pricing & operations optimization (PySpark, Airflow, AWS).</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="i">🔬</div>
+        <div>
+          <strong>Geoscience ML Engineer (Contract) · Petrobras — 2025</strong><br/>
+          <span class="muted">Seismic segmentation, facies classification, well-log modeling; multimodal fusion (3D seismic + logs).</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="i">🛍️</div>
+        <div>
+          <strong>ML Engineer (Contract) · C&A — 2024</strong><br/>
+          <span class="muted">Multimodal demand forecasting (images + tabular + time series) with robust backtesting.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="i">🍔</div>
+        <div>
+          <strong>ML Consultant · Quero Delivery — 2024–2025</strong><br/>
+          <span class="muted">Recommenders & behavior analytics on AWS; MongoDB ↔ SQL pipelines.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="i">🎓</div>
+        <div>
+          <strong>MSc · UFMG (with Google Scholarship) — 2023–2025</strong><br/>
+          <span class="muted">Efficient adaptation of Visual Foundation Models using multi-view videos.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="i">🧯</div>
+        <div>
+          <strong>Computer Vision R&D (Contract via UFMG) · Petrobras — 2018–2021</strong><br/>
+          <span class="muted">Offshore safety: obstruction detection and PPE compliance; real-time CV on edge/server.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="i">⌚</div>
+        <div>
+          <strong>ML & Sensor Data Engineer (Contract) · Samsung — 2017–2018</strong><br/>
+          <span class="muted">HAR-HEALTH: wearable/mobile IMU activity recognition; on-device prototypes (TFLite/ONNX).</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="portfolio">
+    <h2 data-i18n="sec_portfolio">Portfolio</h2>
+    <p class="muted" data-i18n="sec_portfolio_desc">Selected projects with open-source code, demos and results.</p>
+    <div class="grid cols-3">
+      <article class="card">
+        <h3 style="margin-top:0">VESSA</h3>
+        <p class="muted">Efficient self-supervised adaptation of VFMs with multi-view videos (Google-supported MSc).</p>
+        <a class="btn" href="https://github.com/jesimonbarreto" target="_blank" rel="noopener">GitHub</a>
+      </article>
+      <article class="card">
+        <h3 style="margin-top:0">GODeep · Petrobras</h3>
+        <p class="muted">Seismic segmentation, facies & logs; multimodal fusion (3D + logs), active learning.</p>
+      </article>
+      <article class="card">
+        <h3 style="margin-top:0">C&A Forecasting</h3>
+        <p class="muted">Sell-through / sales-rate forecasting with images + tabular + TS; WAPE/MAPE/SMAPE.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="publicacoes">
+    <h2 data-i18n="sec_pubs">Publications & Patents</h2>
+    <div class="list">
+      <div class="item">
+        <div class="i">📄</div>
+        <div>
+          <strong>Object-Based Temporal Segment Relational Network for Activity Recognition — 2024.</strong>
+          <div class="muted"><a href="#">Link</a></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="i">Ⓟ</div>
+        <div>
+          <strong>System and method for detecting food ingestion events from wearable devices — 2025.</strong>
+          <div class="muted"><a href="#">Patent</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <h2 data-i18n="sec_contact">Contact</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <p data-i18n="contact_desc">Open to consulting, talks and R&D collaborations. Send a message:</p>
+        <form name="contact" method="POST" netlify>
+          <input type="hidden" name="form-name" value="contact" />
+          <div style="display:grid;gap:10px">
+            <input class="pill" name="name" placeholder="Your name / Seu nome" required />
+            <input class="pill" type="email" name="email" placeholder="Your email / Seu e-mail" required />
+            <textarea class="pill" name="message" placeholder="How can I help? / Como posso ajudar?" rows="4" required></textarea>
+            <button class="btn" type="submit">Send / Enviar</button>
+          </div>
+        </form>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0" data-i18n="quick_links">Quick links</h3>
+        <ul>
+          <li><a href="#experiencia">Experience</a></li>
+          <li><a href="#parcerias">Partners & R&D</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#patents">Patents</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+        </ul>
+        <p class="muted">© <span id="y"></span> Jesimon Barreto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="detalhes">
+    <h2 id="pageTitle">Details</h2>
+    <div id="pageBody" class="grid cols-2"></div>
+  </section>
+</main>
+
+<footer class="container">
+  <hr style="border:0;border-top:1px solid var(--border)"/>
+  <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <span class="muted" data-i18n="footer_left">Built with plain HTML + CSS (no build).</span>
+    <span class="muted" data-i18n="footer_right">Light/Dark theme · Accessible · Responsive</span>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Jesimon Barreto","jobTitle":"Data Scientist / Computer Vision Researcher","url":"https://jesimonbarreto.github.io/","sameAs":["https://github.com/jesimonbarreto","https://www.linkedin.com/in/jesimonbarreto/"]}
+</script>
+
+<script>
+const DATA = {
+  projects: [
+    { id:'vessa', title:'VESSA — Efficient Adaptation of Visual Foundation Models', period:'2023–2025',
+      summary:'Google-supported MSc: adapting VFMs with short multi-view, object-centric videos to improve downstream tasks with limited labels.',
+      links:[{label:'GitHub', href:'https://github.com/jesimonbarreto'}],
+      details:['Problem: adapt DINO/DINOv2 to specialized domains with scarce labels.',
+               'Approach: self-supervised update using pairs of frames from short multi-view videos; KNN evaluation; ablations (LoRA, crops, temperatures).',
+               'Impact: consistent gains over baselines with lower compute; enterprise-friendly fine-tuning.']},
+    { id:'godeep-petrobras', title:'GODeep — Seismic Interpretation & Well-Log Modeling (Petrobras)', period:'2025',
+      summary:'End-to-end ML for subsurface: seismic segmentation, facies classification, well-log regression; multimodal fusion (3D seismic + logs).',
+      links:[], details:['Data standards: SEGY/LAS ingestion, QC, depth/time alignment; label QA with geoscientists.',
+                         'Models: 2D/3D CNNs (U-Net/UNet3D), ViT/SegFormer; 1D-CNN/LSTM/Transformer for logs.',
+                         'Active learning to reduce annotation; evaluation suites (IoU/Dice, F1, RMSE/MAE).',
+                         'Stack: Python, PyTorch/Lightning, TensorFlow/JAX/Flax, segyio/lasio/obspy, MLflow/DVC.']},
+    { id:'cea-forecast', title:'Multimodal Demand Forecasting — Fashion/Apparel (C&A)', period:'2024',
+      summary:'Sell-through / sales-rate forecasting using product images + tabular attributes + transactional time series.',
+      links:[], details:['Rolling-origin backtesting; leakage-safe splits at store–SKU–week granularity.',
+                         'Baselines: regularized linear models, XGBoost/LightGBM; deep TS (1D-CNN/LSTM/TFT-style).',
+                         'Multimodal fusion with learned image embeddings (ResNet/ViT).',
+                         'KPIs: WAPE/MAPE/SMAPE; stockout/overstock; weekly stakeholder reports.']},
+    { id:'quero-reco', title:'Recommendation & User Behavior Analytics (Quero Delivery)', period:'2024–2025',
+      summary:'Consulting for recommenders and behavioral analytics on AWS with MongoDB integration.',
+      links:[], details:['Pipelines: MongoDB → SQL analysis → predictive models → outputs back to MongoDB.',
+                         'Statistical analysis of interactions and purchasing behavior for decision-making.']},
+    { id:'offshore-safety', title:'Offshore Safety — Real-time Computer Vision (Petrobras/UFMG)', period:'2018–2021',
+      summary:'Video-based obstruction detection and PPE compliance with real-time alerts.',
+      links:[], details:['Multi-camera detection, tracking & re-ID; edge/server inference with ONNX/TensorRT.',
+                         'Evaluation aligned to business KPIs (mAP/F1, false positives, time-to-alert).']},
+    { id:'har-health', title:'HAR-HEALTH — Wearable/Mobile Sensors for Chronic Conditions (Samsung)', period:'2017–2018',
+      summary:'Human Activity Recognition from IMU streams (accelerometer/gyroscope/magnetometer).',
+      links:[], details:['Signal preprocessing, sliding-window segmentation, time/frequency features.',
+                         'Classical ML (RF/SVM) and deep sequence models (1D-CNN, LSTM/GRU).',
+                         'On-device prototypes (Android/Wear OS) with TensorFlow Lite / ONNX.']}
+  ],
+  patents:[
+    { year:2025, title:'System and method for detecting food ingestion events from wearable devices', number:'', coauthors:['Barreto, J.','…'], link:'' },
+    { year:2022, title:'Método de reconhecimento de vídeo capaz de codificar relações temporais e espaciais de conceitos utilizando informações contextuais', number:'', coauthors:['Barreto, J.','…'], link:'' }
+  ],
+  publications:[
+    { year:2024, title:'Object-Based Temporal Segment Relational Network for Activity Recognition', venue:'', link:'' },
+    { year:2019, title:'DESENVOLVIMENTO DE REALIDADE VIRTUAL PARA PROCEDIMENTOS FISIOTERÁPICOS', venue:'', link:'' },
+    { year:2018, title:'Uma biblioteca de componentes para desenvolvimento de aplicações controladas por gestos', venue:'', link:'' },
+    { year:2017, title:'TTAIRBUTTON: Biblioteca para Criação de Botões Virtuais com Execução de Ações', venue:'', link:'' },
+    { year:2016, title:'TTAirBloodPressure: aula interativa sobre aferimento de pressão arterial', venue:'', link:'' }
+  ],
+  timeline:[
+    { year:2025, items:['Data Scientist — iFood (efficiency, UX, strategic ML).','Geoscience ML Engineer — Petrobras GODeep (seismic/3D + logs).','MSc defense — UFMG; Google collaboration on VFM adaptation.']},
+    { year:2024, items:['ML Engineer — C&A (multimodal demand forecasting).','ML Consultant — Quero Delivery (recommenders & behavior analytics).']},
+    { year:2023, items:['Google Research Scholarship — Visual domain adaptation research.']},
+    { year:2018, items:['Computer Vision R&D — Petrobras/UFMG (offshore safety, real-time CV).']},
+    { year:2017, items:['ML & Sensor Data Engineer — Samsung (HAR-HEALTH).']}
+  ]
+};
+
+function h(tag, attrs={}, children=[]){
+  const el=document.createElement(tag);
+  for(const [k,v] of Object.entries(attrs)){
+    if(k==='class') el.className=v; else if(k==='html') el.innerHTML=v; else el.setAttribute(k,v);
+  }
+  for(const c of children){ if(typeof c==='string'){ el.appendChild(document.createTextNode(c)); } else if(c){ el.appendChild(c); } }
+  return el;
+}
+function renderProjects(){ const body=document.getElementById('pageBody'); body.innerHTML=''; DATA.projects.forEach(p=>{ const card=h('article',{class:'card'},[ h('h3',{html:p.title}), h('p',{class:'muted',html:`${p.period} — ${p.summary}`}),
+    h('div',{},p.details.map(d=>h('div',{class:'muted',html:d}))), h('div',{style:'margin-top:10px;display:flex;gap:8px'},(p.links||[]).map(l=>h('a',{class:'btn',href:l.href,target:'_blank',rel:'noopener'},[l.label]))) ]); body.appendChild(card); }); }
+function renderPublications(){ const body=document.getElementById('pageBody'); body.innerHTML=''; DATA.publications.sort((a,b)=>b.year-a.year).forEach(p=>{ body.appendChild(h('div',{class:'item'},[ h('div',{class:'i'},['📄']), h('div',{},[ h('strong',{html:`${p.title} — ${p.venue||'—'}, ${p.year}.`}), h('div',{class:'muted',html:p.link?`<a href="${p.link}" target="_blank" rel="noopener">Link</a>`:''}) ]) ])); }); }
+function renderPatents(){ const body=document.getElementById('pageBody'); body.innerHTML=''; DATA.patents.sort((a,b)=>b.year-a.year).forEach(p=>{ body.appendChild(h('div',{class:'item'},[ h('div',{class:'i'},['Ⓟ']), h('div',{},[ h('strong',{html:`${p.title} — ${p.year}`}), h('div',{class:'muted',html:`${p.number||''}${p.link?` · <a href="${p.link}" target="_blank" rel="noopener">record</a>`:''}`}), h('div',{class:'muted',html:`Co-authors: ${p.coauthors.join(', ')}`}) ]) ])); }); }
+function renderTimeline(){ const body=document.getElementById('pageBody'); body.innerHTML=''; DATA.timeline.sort((a,b)=>b.year-a.year).forEach(y=>{ const year=h('div',{class:'card'},[ h('h3',{html:String(y.year)}), ...y.items.map(it=>h('div',{class:'muted',html:`• ${it}`})) ]); body.appendChild(year); }); }
+function route(){ const hash=location.hash.replace('#',''); const title=document.getElementById('pageTitle'); if(hash.startsWith('projects')){ title.textContent='Projects / Projetos'; renderProjects(); } else if(hash==='publications'){ title.textContent='Publications / Publicações'; renderPublications(); } else if(hash==='patents'){ title.textContent='Patents / Patentes'; renderPatents(); } else if(hash==='timeline'){ title.textContent='Timeline / Linha do tempo'; renderTimeline(); } }
+window.addEventListener('hashchange', route); window.addEventListener('DOMContentLoaded', route);
+</script>
+</body>
 </html>
