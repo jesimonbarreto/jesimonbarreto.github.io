@@ -258,6 +258,7 @@
           <a class="pill" href="./cv/jesimon_barreto.pdf" target="_blank" rel="noopener">CV (PDF)</a>
           <a class="pill" href="http://lattes.cnpq.br/3610168177845458" target="_blank" rel="noopener">Lattes</a>
           <a class="pill" href="https://www.linkedin.com/in/jesimonbarreto/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="pill" href="https://scholar.google.com/citations?user=kG1r_84AAAAJ&hl" target="_blank" rel="noopener">Google Scholar</a>
           <a class="pill" href="mailto:jesimonbarreto@gmail.com">Email</a>
         </div>
       </div>
@@ -298,6 +299,7 @@ const DATA = {
   ],
   publications:[
     { year:2024, title:'Object‑Based Temporal Segment Relational Network for Activity Recognition', venue:'', link:'' }
+    
   ],
   timeline:[
     { year:2025, items:['Data Scientist — iFood (eficiência, UX, ML estratégico).','Geoscience ML — Petrobras GODeep (sísmica 3D + logs).','MSc — UFMG; colaboração Google em VFMs.']},
@@ -378,9 +380,10 @@ function renderAbout(){
     h('h3',{html:'Links'}),
     h('ul',{},[
       h('li',{},[h('a',{href:'./cv/jesimon_barreto.pdf',target:'_blank',rel:'noopener'},['CV (PDF)'])]),
-      h('li',{},[h('a',{href:'http://lattes.cnpq.br/3610168177845458',target:'_blank',rel:'noopener'},['Lattes CV'])]),
+      h('li',{},[h('a',{href:'http://lattes.cnpq.br/3610168177845458',target:'_blank',rel:'noopener'},['Lattes'])]),
       h('li',{},[h('a',{href:'https://www.linkedin.com/in/jesimonbarreto/',target:'_blank',rel:'noopener'},['LinkedIn'])]),
-      h('li',{},[h('a',{href:'mailto:jesimonbarreto@gmail.com'},['jesimonbarreto@gmail.com'])])
+      h('li',{},[h('a',{href:'https://scholar.google.com/citations?user=kG1r_84AAAAJ&hl',target:'_blank',rel:'noopener'},['Google Scholar'])]),
+      h('li',{},[h('a',{href:'mailto:jesimonbarreto@gmail.com'},['Email'])])
     ])
   ]));
 }
