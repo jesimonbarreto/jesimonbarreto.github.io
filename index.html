@@ -377,7 +377,7 @@ const DATA = {
   ],
 
   publications: [
-    { year: 2025, title: 'VESSA: Video-based objEct-centric Self-Supervised Adaptation', venue: 'NeurIPS 2025', link: 'https://neurips.cc/virtual/2025/loc/san-diego/' },
+    { year: 2025, title: 'VESSA: Video-based objEct-centric Self-Supervised Adaptation', venue: 'NeurIPS 2025',type: 'Conference', rank: 'top-tier', link: 'https://neurips.cc/virtual/2025/loc/san-diego/poster/119748'},
     { year: 2020, title: 'Human Activity Recognition based on Smartphone Sensors', venue: 'NEUROCOMPUTING', link: '' },
     { year: 2018, title: 'Object-Based Temporal Segment Relational Network for Activity Recognition', venue: '31st SIBGRAPI Conference on Graphics, Patterns and Images', link: 'http://dx.doi.org/10.1109/SIBGRAPI.2018.00020' },
     { year: 2018, title: 'Multiscale DCNN Ensemble Applied to Human Activity Recognition', venue: '26th European Signal Processing Conference (EUSIPCO)', link: 'http://dx.doi.org/10.23919/EUSIPCO.2018.8553354' },
@@ -388,30 +388,114 @@ const DATA = {
   ],
 
   timeline: [
-    { year: 2026, items: ['Reviewer — CVPR 2026 (IEEE/CVF Conference on Computer Vision and Pattern Recognition)'] },
-    { year: 2025, items: [
-      'Data Scientist — iFood (Large-scale ML systems for pricing, efficiency and operations)',
-      'Geoscience ML Engineer — Petrobras GODeep (Seismic 3D interpretation & well-log modeling)',
-      'MSc Defense — UFMG (Visual Foundation Models & Efficient Adaptation)',
-      'NeurIPS 2025 — VESSA accepted (Video-based Self-Supervised Adaptation)'
-    ]},
-    { year: 2024, items: [
-      'Machine Learning Engineer — C&A (Multimodal demand forecasting: image + tabular + time-series)',
-      'ML Consultant — Quero Delivery (Recommender systems & behavioral analytics on AWS + MongoDB)',
-      'Google Research Scholarship — Visual domain adaptation research'
-    ]},
-    { year: 2023, items: [
-      'MSc in Computer Science — UFMG (Google-supported research)',
-      'Computer Vision Research Engineer — OMNI Solutions',
-      'Data Scientist — Big Data (short-term engagement)'
-    ]},
-    { year: 2022, items: ['Artificial Intelligence Researcher Intern — Samsung Electronics (Campinas, Brazil)'] },
-    { year: 2021, items: ['Computer Vision R&D Engineer — Petrobras (Offshore Safety, real-time detection & tracking)'] },
-    { year: 2018, items: ['Computer Vision R&D Engineer (Contract via UFMG) — Petrobras'] },
-    { year: 2017, items: ['Machine Learning & Sensor Data Engineer — Samsung Electronics', 'Human Activity Recognition research (IMU / wearable systems)'] },
-    { year: 2016, items: ['Undergraduate Researcher — Touching the Air Research Group', 'Research in human-computer interaction and gesture-based systems'] },
-    { year: 2012, items: ['Undergraduate Student Researcher — Early research in Computer Vision and HCI'] }
-  ]
+
+  { year: 2026, items: [
+    'Reviewer — CVPR 2026 (IEEE/CVF Conference on Computer Vision and Pattern Recognition)',
+    'Machine Learning Engineer/Data Scientist — iFood (Large-scale ML systems for pricing, efficiency and operations)'
+  ]},
+
+  { year: 2025, items: [
+    'Data Scientist — iFood (Large-scale ML systems for pricing, efficiency and operations)',
+    'Geoscience ML Engineer — Petrobras GODeep (Seismic 3D interpretation & well-log modeling)',
+    'MSc Defense — UFMG (Visual Foundation Models & Efficient Adaptation)',
+    'NeurIPS 2025 — VESSA accepted (Video-based Self-Supervised Adaptation)',
+
+    // Complementos
+    'CAPES Graduate Fellowship (MSc)',
+    'Master’s Thesis: VESSA — Efficient Video-based Self-Supervised Adaptation for Visual Foundation Models'
+  ]},
+
+  { year: 2024, items: [
+    'Machine Learning Engineer — C&A (Multimodal demand forecasting: image + tabular + time-series)',
+    'ML Consultant — Quero Delivery (Recommender systems & behavioral analytics on AWS + MongoDB)',
+    'Google Research Scholarship — Visual domain adaptation research',
+
+    // Complementos
+    'International Patent Filing (Brazil) — System and Method for Detecting Food Ingestion Events from Wearable Devices (BR1020230045448)',
+    'Research continuation in Visual Foundation Models and domain adaptation (UFMG)'
+  ]},
+
+  { year: 2023, items: [
+    'MSc in Computer Science — UFMG (Google-supported research)',
+    'Computer Vision Research Engineer — OMNI Solutions',
+    'Data Scientist — Big Data (short-term engagement)',
+
+    // Complementos
+    'Artificial Intelligence Researcher Intern — Samsung Electronics (Sensor-based health systems)',
+    'Patent Filing (Brazil) — Food ingestion detection from wearable devices',
+    'Advanced research in self-supervised learning and representation learning'
+  ]},
+
+  { year: 2022, items: [
+    'Artificial Intelligence Researcher Intern — Samsung Electronics (Campinas, Brazil)',
+
+    // Complementos
+    'Bachelor’s Degree in Systems Engineering — UFMG',
+    'Undergraduate Thesis: FrankDataset — Framework for Human Activity Recognition Generalization',
+    'US Patent Filing — Method for Video Recognition Encoding Spatial & Temporal Contextual Relationships'
+  ]},
+
+  { year: 2021, items: [
+    'Computer Vision R&D Engineer — Petrobras (Offshore Safety, real-time detection & tracking)',
+
+    // Complementos
+    'Development of intelligent video surveillance systems for offshore platforms (SMS Project)',
+    'Deployment-focused CV systems with real-time constraints'
+  ]},
+
+  { year: 2020, items: [
+    // Complementos adicionados (ano não existia antes)
+    'Publication — Human Activity Recognition based on Smartphone and Wearable Sensors (Neurocomputing)',
+    'Patent Filing (Brazil) — Video Recognition Encoding Spatial & Temporal Relationships'
+  ]},
+
+  { year: 2018, items: [
+    'Computer Vision R&D Engineer (Contract via UFMG) — Petrobras',
+
+    // Complementos
+    'Publication — Object-Based Temporal Segment Relational Network (SIBGRAPI 2018)',
+    'Publication — Multiscale DCNN Ensemble Applied to Human Activity Recognition (EUSIPCO 2018)',
+    'Samsung-funded HAR-HEALTH Project (Human Activity Recognition for chronic diseases)'
+  ]},
+
+  { year: 2017, items: [
+    'Machine Learning & Sensor Data Engineer — Samsung Electronics',
+    'Human Activity Recognition research (IMU / wearable systems)',
+
+    // Complementos
+    'Development of embedded ML models for wearable devices',
+    'Applied research in activity recognition for health monitoring'
+  ]},
+
+  { year: 2016, items: [
+    'Undergraduate Researcher — Touching the Air Research Group',
+    'Research in human-computer interaction and gesture-based systems',
+
+    // Complementos
+    'Smart Sense Laboratory (UFMG) — Research in Intelligent Systems and Computer Vision',
+    'Participation in DeepEyes Workshop (Visual Computing & Machine Intelligence)'
+  ]},
+
+  { year: 2014, items: [
+    // Novo ano relevante do Lattes
+    'Technical Degree in Computer Networks — Federal Institute of Sergipe (IFS)',
+    'Research in Augmented Reality and Kinect-based educational systems',
+    'Best PIBIC Jr. Project Award — National Science & Technology Week'
+  ]},
+
+  { year: 2013, items: [
+    'Undergraduate Research — Gesture-based Interaction Systems (Touching the Air Research Group)',
+    'Publication — Gesture-based Component Library (Brazilian Symposium on Human Factors in Computing Systems)'
+  ]},
+
+  { year: 2012, items: [
+    'Undergraduate Student Researcher — Early research in Computer Vision and HCI'
+  ]},
+
+  { year: 2011, items: [
+    'Started Technical Degree in Computer Networks (Federal Institute of Sergipe — IFS) alongside High School'
+  ]},
+]
 };
 
 
@@ -573,7 +657,7 @@ function renderAbout() {
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/jesimonbarreto/' },
     { label: 'Lattes', href: 'http://lattes.cnpq.br/3610168177845458' },
     { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=kG1r_84AAAAJ&hl' },
-    { label: 'Email', href: 'mailto:jesimonbarreto@gmail.com' }
+    { label: 'jesimonbarreto@gmail.com', href: 'mailto:jesimonbarreto@gmail.com' }
   ].filter(l => l && l.href);
 
   body.appendChild(h('div', { class: 'card' }, [
@@ -591,13 +675,13 @@ function renderAbout() {
    ROUTER (troca “página” e rola até #detalhes)
    ========================================================= */
 function route() {
-  const hash = (location.hash || '#about').replace('#', '');
+  const hash = (location.hash || '#timeline').replace('#', '');
   const title = document.getElementById('pageTitle');
 
   if (hash.startsWith('projects')) { title.textContent = 'Projetos / Projects'; renderProjects(); }
   else if (hash === 'publications') { title.textContent = 'Publicações / Publications'; renderPublications(); }
   else if (hash === 'patents') { title.textContent = 'Patentes / Patents'; renderPatents(); }
-  else if (hash === 'timeline') { title.textContent = 'Linha do tempo / Timeline'; renderTimeline(); }
+  else if (hash === 'timeline') { title.textContent = 'Timeline'; renderTimeline(); }
   else { title.textContent = 'About me / Sobre mim'; renderAbout(); }
 
   const details = document.getElementById('detalhes');
