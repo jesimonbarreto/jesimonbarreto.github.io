@@ -264,24 +264,30 @@
     <div id="pageBody" class="grid cols-2"></div>
   </section>
 
-  <!-- CONTATO (sempre por último) -->
+ <!-- CONTATO (sempre por último) -->
   <section class="section" id="contato">
     <h2 data-i18n="sec_contact">Contato</h2>
     <div class="grid cols-2">
+
+      <!-- FORM FUNCIONAL (GitHub Pages compatível) -->
       <div class="card">
-        <p data-i18n="contact_desc">Aberto a consultorias, palestras e colaborações em P&D. Envie uma mensagem:</p>
-        <form name="contact" method="POST" netlify>
-          <input type="hidden" name="form-name" value="contact" />
-          <div style="display:grid;gap:10px">
-            <input class="pill" name="name" placeholder="Seu nome / Your name" required />
-            <input class="pill" type="email" name="email" placeholder="Seu e-mail / Your email" required />
-            <textarea class="pill" name="message" placeholder="Como posso ajudar? / How can I help?" rows="4" required></textarea>
-            <button class="btn" type="submit">Enviar / Send</button>
-          </div>
-        </form>
+        <p data-i18n="contact_desc">
+          Aberto a consultorias, palestras e colaborações em P&D. Envie uma mensagem:
+        </p>
+
+        <div style="display:grid;gap:10px">
+          <input class="pill" id="contact-name" placeholder="Seu nome / Your name" required />
+          <input class="pill" type="email" id="contact-email" placeholder="Seu e-mail / Your email" required />
+          <textarea class="pill" id="contact-message" placeholder="Como posso ajudar? / How can I help?" rows="4" required></textarea>
+
+          <button class="btn" onclick="sendEmail()">Enviar / Send</button>
+        </div>
       </div>
+
+      <!-- LINKS RÁPIDOS -->
       <div class="card">
         <h3 style="margin-top:0" data-i18n="quick_links">Links rápidos</h3>
+
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -289,7 +295,8 @@
           <li><a href="#patents">Patents</a></li>
           <li><a href="#timeline">Timeline</a></li>
         </ul>
-        <div style="margin-top:8px">
+
+        <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
           <a class="pill" href="./cv/jesimonbarreto_cv_merc.pdf" target="_blank" rel="noopener">CV (PDF)</a>
           <a class="pill" href="http://lattes.cnpq.br/3610168177845458" target="_blank" rel="noopener">Lattes</a>
           <a class="pill" href="https://www.linkedin.com/in/jesimonbarreto/" target="_blank" rel="noopener">LinkedIn</a>
@@ -297,8 +304,10 @@
           <a class="pill" href="mailto:jesimonbarreto@gmail.com">Email</a>
         </div>
       </div>
+
     </div>
   </section>
+
 </main>
 
 <footer class="container">
